@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day3</title>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <center>   
+    <div class="bor">
+        <form name="myForm"  onsubmit="return validateForm()" method="post">
+        <div class="details">
+            <H2>
+                Personal information
+            </H2>
+            Name:<input type="text" name="fname"><br><br>
+         Gender:    <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female"> FeMale<br><br>
+            HomeTown 
+            <select>
+                <option value="volvo">Betul</option>
+                <option value="saab">Bhopal</option>
+                <option value="mercedes">Sagar</option>
+                <option value="audi">Nagpur</option>
+              </select><br><br>
+    Address:
+              <textarea rows="4"cols="50"  name="comment" form="usrform">
+               </textarea>
+    
+            <br><br>
+            Skills: <input type="checkbox" name="vehicle1" value="Bike"> Java
+            <input type="checkbox" name="vehicle1" value="Bike"> c++
+            <input type="checkbox" name="vehicle1" value="Bike"> python<br><br>
+    
+            password: <input type="text" name="dname"><br><br>
+            <input type="submit" value="Submit">
+        </div>
+    </form></div>
+
+
+</center>
+</body>
+
+<script>
+    function validateForm() {
+      var x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    
+      else{
+
+        var x1 = document.forms["myForm"]["fname"].value;
+        var x = document.forms["myForm"]["dname"].value;
+        if(!isNaN(x1))
+    {
+    alert("Please Enter Only Characters");
+    document.myForm.fname.select();
+    return false;
+    }
+        if (x == "") {
+        alert("Password must be filled out");
+        return false;
+      }else{
+
+        alert("The form was submitted");
+        return true;}
+      }
+
+     
+}
+
+
+    </script>
+
+
+
+
+
+</html>
